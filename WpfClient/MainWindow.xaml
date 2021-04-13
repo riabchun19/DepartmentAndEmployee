@@ -1,0 +1,52 @@
+﻿<Window x:Class="WpfClient.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfClient"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800" >
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <StackPanel Grid.Column="0">
+            <DataGrid Margin="16,10" x:Name="lvEmployee" VerticalAlignment="Top" AutoGenerateColumns="False"
+                     Height="250" ItemsSource="{Binding}" EnableRowVirtualization="True">
+                <DataGrid.Columns> 
+                    <DataGridTextColumn Header="№" Binding="{Binding Path=IdEmp}"/>
+                    <DataGridTextColumn Header="Имя" Width="85" Binding="{Binding Path=Name}"/>
+                    <DataGridTextColumn Header="Возраст" Width="85" Binding="{Binding Path=Age}"/>
+                    <DataGridTextColumn Header="Зарплата" Width="85" Binding="{Binding Path=Salary}"/>
+                    <DataGridTextColumn Header="Департамент" Width="85" Binding="{Binding Path=Department}"/>
+                </DataGrid.Columns>
+            </DataGrid>
+            <StackPanel Height="163">
+                <TextBlock Text="Id сотрудника" Width="90"/>
+                <TextBox x:Name="idproductTextBox" Height="23" Width="120"/>
+                <Button Height="25" Width="150" Click="IdEmployeeButton_Click"
+                     Content="Найти сотрудника"/>
+                <Button Content="Весь список" Height="25" Width="100" Click="AllproductButton_ClickEmp"/>
+            </StackPanel>
+        </StackPanel>
+
+        <StackPanel Grid.Column="1">
+            <DataGrid Margin="10" x:Name="lbDepartmant" ItemsSource="{Binding}" 
+                     VerticalAlignment="Top" AutoGenerateColumns="False" Height="250" EnableRowVirtualization="True">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="№" Binding="{Binding Path=IdDep}"/>
+                    <DataGridTextColumn Header="Имя" Width="350" Binding="{Binding Path=NameDep}"/>
+                </DataGrid.Columns>
+            </DataGrid>
+            <StackPanel Height="163">
+                <TextBlock Text="Id департамента" Width="90"/>
+                <TextBox x:Name="idproductTextBox2" Height="23" Width="120"/>
+                <Button Height="25" Width="150" Click="IdDepartmentButton_Click"
+                     Content="Найти департамент"/>
+                <Button Content="Весь список" Height="25" Width="100" Click="AllproductButton_ClickDep"/>
+            </StackPanel>
+        </StackPanel> 
+    </Grid>
+</Window>
