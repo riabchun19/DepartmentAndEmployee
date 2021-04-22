@@ -5218,11 +5218,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Олександр\\source\\repos\\WebApplicationExample\\WpfClient\\WpfClient.csproj",
+      "projectUniqueName": "C:\\Users\\Олександр\\Desktop\\Новая папка (2)\\WpfClient\\WpfClient.csproj",
       "projectName": "WpfClient",
-      "projectPath": "C:\\Users\\Олександр\\source\\repos\\WebApplicationExample\\WpfClient\\WpfClient.csproj",
+      "projectPath": "C:\\Users\\Олександр\\Desktop\\Новая папка (2)\\WpfClient\\WpfClient.csproj",
       "packagesPath": "C:\\Users\\Олександр\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Олександр\\source\\repos\\WebApplicationExample\\WpfClient\\obj\\",
+      "outputPath": "C:\\Users\\Олександр\\Desktop\\Новая папка (2)\\WpfClient\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -5277,7 +5277,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
       }
     }
   }

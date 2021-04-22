@@ -5848,11 +5848,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Олександр\\source\\repos\\WebApplicationExample\\WebApplicationExample\\WebApplicationExample.csproj",
+      "projectUniqueName": "C:\\Users\\Олександр\\Desktop\\Новая папка (2)\\WebApplicationExample\\WebApplicationExample.csproj",
       "projectName": "WebApplicationExample",
-      "projectPath": "C:\\Users\\Олександр\\source\\repos\\WebApplicationExample\\WebApplicationExample\\WebApplicationExample.csproj",
+      "projectPath": "C:\\Users\\Олександр\\Desktop\\Новая папка (2)\\WebApplicationExample\\WebApplicationExample.csproj",
       "packagesPath": "C:\\Users\\Олександр\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Олександр\\source\\repos\\WebApplicationExample\\WebApplicationExample\\obj\\",
+      "outputPath": "C:\\Users\\Олександр\\Desktop\\Новая папка (2)\\WebApplicationExample\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -5911,7 +5911,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
       }
     }
   }

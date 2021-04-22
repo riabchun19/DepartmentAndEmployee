@@ -1,6 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 using WebApplicationExample.Models;
 
 namespace WebApplicationExample.Controllers
@@ -22,18 +24,61 @@ namespace WebApplicationExample.Controllers
         }
 
         [HttpGet]
-        public IEnumerable<Department> Get()
+        public async Task<ActionResult<IEnumerable<Department>>> Get()
         {
-            return db.Departments.ToArray();
+            return await db.Departments.ToListAsync();
         }
 
         [HttpGet("{id}")]
-        public Department Get(int id)
+        public async Task<ActionResult<Department>> Get(int id)
         {
-            Department departmentId = db.Departments.FirstOrDefault(x => x.IdDep == id);
-            if (departmentId == null)
-                return departmentId = null;  
-            return departmentId;  
+            Department department = await db.Departments.FirstOrDefaultAsync(x => x.IdDep == id);
+            if (department == null)
+                return NotFound();
+            return new ObjectResult(department);
+        }
+
+        [HttpPost]
+        public async Task<ActionResult<Department>> Post(Department department)
+        {
+            if (department == null)
+            {
+                return BadRequest();
+            }
+
+            db.Departments.Add(department);
+            await db.SaveChangesAsync();
+            return Ok(department);
+        }
+
+        [HttpPut]
+        public async Task<ActionResult<Department>> Put(Department department)
+        {
+            if (department == null)
+            {
+                return BadRequest();
+            }
+            if (!db.Departments.Any(x => x.IdDep == department.IdDep))
+            {
+                return NotFound();
+            }
+
+            db.Update(department);
+            await db.SaveChangesAsync();
+            return Ok(department);
+        }
+
+        [HttpDelete("{id}")]
+        public async Task<ActionResult<Department>> Delete(int id)
+        {
+            Department department = db.Departments.FirstOrDefault(x => x.IdDep == id);
+            if (department == null)
+            {
+                return NotFound();
+            }
+            db.Departments.Remove(department);
+            await db.SaveChangesAsync();
+            return Ok(department);
         }
     }
 }

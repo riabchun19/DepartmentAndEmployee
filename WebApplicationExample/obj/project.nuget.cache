@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "YSiy/RxyfnYFhL+jNXkVGztehk+lTLI8RC8SuAsWQJMsJguI5fcXhF8sJbcyZxSKwWv8QO8d6JcZSPo0nY2txQ==",
+  "dgSpecHash": "7Omp4WdO2ieBRZVy2KTBX3eHOJ9D6xXtB535qPYwjgJ88Z912Vqxf2zqM6ITM+IUfWuKRmSmf9lyw61AIB8zGA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Олександр\\source\\repos\\WebApplicationExample\\WebApplicationExample\\WebApplicationExample.csproj",
+  "projectFilePath": "C:\\Users\\Олександр\\Desktop\\Новая папка (2)\\WebApplicationExample\\WebApplicationExample.csproj",
   "expectedPackageFiles": [
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
     "C:\\Users\\Олександр\\.nuget\\packages\\microsoft.data.sqlclient\\2.0.1\\microsoft.data.sqlclient.2.0.1.nupkg.sha512",

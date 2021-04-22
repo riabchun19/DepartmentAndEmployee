@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "IvpHSAPPkVhd/vwqcuXRv0CsqO2+yvISxhP+c3hy8Z2YeP9krWyrbyBnzs8LDcfv32qEb60r4oowzAnHounCRw==",
+  "dgSpecHash": "TJOoHHB1P2Gab2d7nop/BTDPOFxTdpujRt790HPRH9tJq3l6LyNUYL2z3OyL194QueLxMgI39Yo0qEn1UqlJUA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Олександр\\source\\repos\\WebApplicationExample\\WpfClient\\WpfClient.csproj",
+  "projectFilePath": "C:\\Users\\Олександр\\Desktop\\Новая папка (2)\\WpfClient\\WpfClient.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Олександр\\.nuget\\packages\\microsoft.aspnet.webapi.client\\5.2.7\\microsoft.aspnet.webapi.client.5.2.7.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.csharp\\4.3.0\\microsoft.csharp.4.3.0.nupkg.sha512",
