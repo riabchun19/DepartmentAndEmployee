@@ -25,7 +25,7 @@
             </DataGrid>
             <StackPanel Height="163">
                 <TextBlock Text="Id сотрудника" Width="90"/>
-                <TextBox x:Name="idproductTextBox" Height="23" Width="120"/>
+                <TextBox x:Name="idEmployeeTextBox" Height="23" Width="120"/>
                 <Button Height="25" Width="150" Click="IdEmployeeButton_Click"
                      Content="Найти сотрудника"/>
                 <Button Content="Весь список" Height="25" Width="100" Click="AllproductButton_ClickEmp"/>
@@ -42,10 +42,11 @@
             </DataGrid>
             <StackPanel Height="163">
                 <TextBlock Text="Id департамента" Width="90"/>
-                <TextBox x:Name="idproductTextBox2" Height="23" Width="120"/>
+                <TextBox x:Name="idpDepartmentTextBox" Height="23" Width="120"/>
                 <Button Height="25" Width="150" Click="IdDepartmentButton_Click"
                      Content="Найти департамент"/>
                 <Button Content="Весь список" Height="25" Width="100" Click="AllproductButton_ClickDep"/>
+                <Button Content="Добавить департамент" Height="25" Width="150" Click="AddDepartment"/>
             </StackPanel>
         </StackPanel> 
     </Grid>

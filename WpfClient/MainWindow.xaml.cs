@@ -25,51 +25,83 @@ namespace WpfClient
 
         private async void AllproductButton_ClickEmp(object sender, RoutedEventArgs e)
         {
-            IEnumerable<Employee> employees = await GetProductsAsync<Employee>(client.BaseAddress + "Employees");
+            IEnumerable<Employee> employees = await GetEntitiesAsync<Employee>(client.BaseAddress + "Employees");
             lvEmployee.ItemsSource = employees;
         }
 
         private async void AllproductButton_ClickDep(object sender, RoutedEventArgs e) 
         {
-            IEnumerable<Department> departments = await GetProductsAsync<Department>(client.BaseAddress + "Departments");
+            IEnumerable<Department> departments = await GetEntitiesAsync<Department>(client.BaseAddress + "Departments");
             lbDepartmant.ItemsSource = departments;
         }
 
         private async void IdEmployeeButton_Click(object sender, RoutedEventArgs e)
         {
-            List<Employee> employee = new List<Employee>();
-            if (idproductTextBox.Text != String.Empty)
+            List<Employee> listEmployee = new List<Employee>();
+            if (idEmployeeTextBox.Text != String.Empty)
             {
-                Employee product = await GetProductAsync<Employee>(client.BaseAddress + "Employees/" +
-                idproductTextBox.Text);
-                if (product != null)
-                    employee.Add(product);
+                Employee employee = await GetEssenceAsync<Employee>(client.BaseAddress + "Employees/" +
+                idEmployeeTextBox.Text);
+                if (employee != null)
+                    listEmployee.Add(employee);
             }
             else
             {
-                employee = (List<Employee>)await GetProductsAsync<Employee>(client.BaseAddress + "Employees");
+                listEmployee = (List<Employee>)await GetEntitiesAsync<Employee>(client.BaseAddress + "Employees");
             }
-            lvEmployee.ItemsSource = employee;
+            lvEmployee.ItemsSource = listEmployee;
         }
 
         private async void IdDepartmentButton_Click(object sender, RoutedEventArgs e)
         {
-            List<Department> department = new List<Department>();
-            if (idproductTextBox2.Text != String.Empty)
+            List<Department> listDepartment = new List<Department>();
+            if (idpDepartmentTextBox.Text != String.Empty)
             {
-                Department product = await GetProductAsync<Department>(client.BaseAddress + "Departments/" +
-                idproductTextBox2.Text);
-                if (product != null)
-                    department.Add(product);
+                Department department = await GetEssenceAsync<Department>(client.BaseAddress + "Departments/" +
+                idpDepartmentTextBox.Text);
+                if (department != null)
+                    listDepartment.Add(department);
             }
             else
             {
-                department = (List<Department>)await GetProductsAsync<Department>(client.BaseAddress + "Departments");
+                listDepartment = (List<Department>)await GetEntitiesAsync<Department>(client.BaseAddress + "Departments");
             }
-            lbDepartmant.ItemsSource = department;
+            lbDepartmant.ItemsSource = listDepartment;
         }
 
-        static async Task<IEnumerable<T>> GetProductsAsync<T>(string path)
+        private async void AddDepartment(object sender, RoutedEventArgs e)
+        {
+            List<Department> listDepartments = new List<Department>();
+            Department department = new Department();
+            AddDepartment addDep = new AddDepartment(department);
+            addDep.ShowDialog();
+            if (addDep != null)
+            {
+                department = await PostAsync<Department>(client.BaseAddress + "Departments", addDep.D);
+                if (department != null)
+                    listDepartments.Add(department);
+            }
+            lbDepartmant.ItemsSource = listDepartments;
+        }
+
+        static async Task<T> PostAsync<T>(string path, Department a)
+        {
+            T allEntities = default;
+            try
+            {
+                HttpResponseMessage request = await client.PostAsJsonAsync(path, a);
+                if (request != null)
+                {
+                    allEntities = await request.Content.ReadAsAsync<T>();
+                }
+            }
+            catch (Exception)
+            {
+            }
+            return allEntities;
+        }
+
+        static async Task<IEnumerable<T>> GetEntitiesAsync<T>(string path)
         {
             IEnumerable<T> allEntities = null;
             try
@@ -86,7 +118,7 @@ namespace WpfClient
             return allEntities;
         }
 
-        static async Task<T> GetProductAsync<T>(string path)
+        static async Task<T> GetEssenceAsync<T>(string path)
         {
             T idEssence = default;
             try

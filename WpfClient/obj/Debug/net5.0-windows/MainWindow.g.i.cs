@@ -52,7 +52,7 @@ namespace WpfClient {
         
         #line 28 "..\..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
-        internal System.Windows.Controls.TextBox idproductTextBox;
+        internal System.Windows.Controls.TextBox idEmployeeTextBox;
         
         #line default
         #line hidden
@@ -68,7 +68,7 @@ namespace WpfClient {
         
         #line 45 "..\..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
-        internal System.Windows.Controls.TextBox idproductTextBox2;
+        internal System.Windows.Controls.TextBox idpDepartmentTextBox;
         
         #line default
         #line hidden
@@ -107,7 +107,7 @@ namespace WpfClient {
             this.lvEmployee = ((System.Windows.Controls.DataGrid)(target));
             return;
             case 2:
-            this.idproductTextBox = ((System.Windows.Controls.TextBox)(target));
+            this.idEmployeeTextBox = ((System.Windows.Controls.TextBox)(target));
             return;
             case 3:
             
@@ -129,7 +129,7 @@ namespace WpfClient {
             this.lbDepartmant = ((System.Windows.Controls.DataGrid)(target));
             return;
             case 6:
-            this.idproductTextBox2 = ((System.Windows.Controls.TextBox)(target));
+            this.idpDepartmentTextBox = ((System.Windows.Controls.TextBox)(target));
             return;
             case 7:
             
