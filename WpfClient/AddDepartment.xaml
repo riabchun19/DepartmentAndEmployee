@@ -1,0 +1,14 @@
+﻿<Window x:Class="WpfClient.AddDepartment"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfClient"
+        mc:Ignorable="d"
+        Title="Добавление департамента" Height="450" Width="800">
+    <Grid>
+        <Button Content="Добавить" HorizontalAlignment="Center" Margin="0,271,0,0" VerticalAlignment="Top" 
+                Width="140" Height="30" Click="Button_Click"/>
+        <TextBox x:Name="AddDepar" HorizontalAlignment="Center" Margin="0,120,0,0" VerticalAlignment="Top" Width="500" Height="50"/>
+    </Grid>
+</Window>
