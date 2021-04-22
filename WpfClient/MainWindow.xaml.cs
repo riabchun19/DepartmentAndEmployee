@@ -89,10 +89,10 @@ namespace WpfClient
             T allEntities = default;
             try
             {
-                HttpResponseMessage request = await client.PostAsJsonAsync(path, a);
-                if (request != null)
+                HttpResponseMessage response = await client.PostAsJsonAsync(path, a);
+                if (response != null)
                 {
-                    allEntities = await request.Content.ReadAsAsync<T>();
+                    allEntities = await response.Content.ReadAsAsync<T>();
                 }
             }
             catch (Exception)
